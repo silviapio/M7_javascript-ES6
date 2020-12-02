@@ -69,26 +69,21 @@ function padZeros(num, totalLen) {
     greet("Silvia");
 }
 
-    function correctError3() {
-        var users =
-            [{ firstName: 'Homer', lastName: 'Simpson' },
-            { firstName: 'Marge', lastName: 'Simpson' },
-            { firstName: 'Bart', lastName: 'Simpson' },
-            { firstName: 'Lisa', lastName: 'Simpson' },
-            { firstName: 'Maggie', lastName: 'Simpson' }];
-        
-        let usersFirstName = users.map(user => user.firstName);
-        console.log(usersFirstName);
-    }
+function correctError3() {
+    var users =
+        [{ firstName: 'Homer', lastName: 'Simpson' },
+        { firstName: 'Marge', lastName: 'Simpson' },
+        { firstName: 'Bart', lastName: 'Simpson' },
+        { firstName: 'Lisa', lastName: 'Simpson' },
+        { firstName: 'Maggie', lastName: 'Simpson' }];
 
-/*
-users.map(function (user) {
-   user.firstName;
-});
+    let usersFirstName = users.map(user => user.firstName);
+    console.log(usersFirstName);
+}
 
-var users = 
-[{ firstName: 'Homer', lastName: 'Simpson' },
-{ firstName: 'Marge', lastName: 'Simpson' },
-{ firstName: 'Bart', lastName: 'Simpson' },
-{ firstName: 'Lisa', lastName: 'Simpson' },
-{ firstName: 'Maggie', lastName: 'Simpson' }];*/
+function useReduce4(){
+    var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+    const stringReducer = (sentenceAcc, currValue) => `${sentenceAcc} ${currValue}`;
+    const epicSentence = epic.reduce(stringReducer);
+    console.log(epicSentence);
+}
