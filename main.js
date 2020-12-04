@@ -87,3 +87,8 @@ function useReduce4(){
     const epicSentence = epic.reduce(stringReducer);
     console.log(epicSentence);
 }
+
+const reverseString5 = myStr => {
+    let strReversed = [...myStr].reverse().join("");
+    console.log(strReversed);
+}
