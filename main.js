@@ -92,3 +92,40 @@ const reverseString5 = myStr => {
     let strReversed = [...myStr].reverse().join("");
     console.log(strReversed);
 }
+
+/*Reemplaça en el següent bloc de codi la promesa per async/await:
+NOTA: funciones modificadas para que devuelvan un log
+function b() {
+   return new Promise((resolve, reject) => {
+    //someone doing the B task
+    let taskBDone = true;
+    if (taskBDone){
+        resolve("Task B is done");
+    }else{
+        reject("Task B is not done");
+    }
+   });
+}
+const doMoreWork = promiseResult => console.log(`${promiseResult} and now I am doing some more work`);
+function a6() {
+   b().then(value => {
+   doMoreWork(value);
+   });
+};
+*/
+
+async function a6() {
+    let b = new Promise((resolve,reject) => {
+        //someone doing the B task
+        let taskBDone = true;
+        if (taskBDone){
+            resolve("Task B is done");
+        }else{
+            reject("Task B is not done");
+        }
+    });
+
+    const doMoreWork = promiseResult => console.log(`${promiseResult} and now I am doing some more work`);
+    let result = await b;
+    doMoreWork(result);
+}
