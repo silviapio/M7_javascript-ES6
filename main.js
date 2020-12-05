@@ -129,3 +129,31 @@ async function a6() {
     let result = await b;
     doMoreWork(result);
 }
+
+function forEachArray7(){
+    let tasks = [
+        {
+           'name' : 'Start React web',
+           'duration' : 120
+        },
+        {
+           'name' : 'Work out',
+           'duration' : 60
+        },
+        {
+           'name' : 'Procrastinate on facebook',
+           'duration' : 240
+        }
+    ];
+    let tasksNames = [];
+    tasks.forEach(element =>{
+        tasksNames.push(element.name);
+    })
+    console.log("Done with forEach():");
+    console.log(tasksNames);
+
+    let tasksNames2 = tasks.map( element => element.name );
+    console.log("Done with map():");
+    console.log(tasksNames2);
+
+}
